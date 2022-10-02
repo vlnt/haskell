@@ -1,5 +1,6 @@
 add :: Int -> ( Int -> Int )
 add x y = x + y
+lastButOne :: [a] -> a
 
 main :: IO()
 main = do 
@@ -7,4 +8,4 @@ main = do
          num2 <- getLine
          let j = read num1 :: Int
          let k = read num2 :: Int
-         print (add j k)
+         print (add j k )
