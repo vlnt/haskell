@@ -1,4 +1,4 @@
-module Demo_v where
+module Rem_v where
 
 --ilog3 n function returns the number of times you can divide given
 -- number by three (rounding down) before you get 0.
