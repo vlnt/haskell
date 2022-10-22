@@ -1,17 +1,33 @@
-    module Main(main) where
 
-    import Rem_v
+    import Rec_set
     -- vlog3 :: Integer -> Integer
     -- vlog3 1 = 1 
     -- vlog3 2 = 1
     -- vlog3 n = 1 + vlog3 (div n 3)
 
-   -- main :: IO()
-    main = do 
-         num <- getLine
-         let n = read num :: Integer
-         print ( Rem_v.vlog3 n )
+    -- processInput :: String -> IO ()
+    -- processInput = do
+    --         line <- getLine
+    --         read $ line :: String
+        
 
+    
+
+    -- loop :: IO ()
+    -- loop = do
+    --     Rec_set.palindromify <- getLine
+        -- case  of
+        --     "quit"    -> return ()
+        --     otherwise -> loop
+        --  num <- getLine
+        --  let n = read num :: Integer
+        --  print ( Rec_set.v  log3 n )
+
+   
+    main = do
+        line <- getLine
+        print ( Rec_set.palindromify line )
+        --Rec_set.palindromify line
         --  GHC automatically adds Rem_v for compiling and linking since is specified Main.hs on the command line.
         --  Since if also specify Rem_v.o, this causes Rem_v.o to be linked twice, resulting in many duplicate definitions.
         --  Use just 
