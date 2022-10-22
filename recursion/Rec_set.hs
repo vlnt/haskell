@@ -2,7 +2,6 @@ module Rec_set where
 
 import Utils
 
-   --import Utils
    --ilog3 n function returns the number of times you can divide given
    -- number by three (rounding down) before you get 0.
 
