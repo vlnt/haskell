@@ -1,5 +1,5 @@
 main:
-	ghc main.hs && ./main
+	ghc Main.hs && ./main
 
 clean:
 	rm *.o *.hi main

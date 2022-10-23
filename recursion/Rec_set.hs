@@ -19,6 +19,7 @@ vlog3 n = 1 + vlog3 (div n 3)
 palindromify :: String -> String
 
 palindromify s = do
+    
     let trunc = tail ( init s ) 
     if Utils.isPalindrome trunc == False
         then palindromify trunc
