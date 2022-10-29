@@ -1,4 +1,4 @@
-module List_vset where
+module Listv_set where
 
 import Data.Char
 
@@ -6,11 +6,15 @@ import Data.Char
 lastButOne :: [a] -> a
 lastButOne a = head (drop 1 (reverse a) )
 
+----------------------------------------------------------------------------
+
 --Write a function that capitalize all words in the string
 capitalizeS :: String -> String
 capitalizeS s = do
      unwords (map cap  (words s))
      where cap w = toUpper (head(take 1 w)):tail w
+
+-----------------------------------------------------------------------------
 
 -- Use recursion and the : operator to build the list.
 --
@@ -23,3 +27,17 @@ buildList start count end = do
     if count > 0 
         then start:buildList start (count-1) end
     else (\x xs -> x:xs) end []
+
+-------------------------------------------------------------------------------
+
+--the function allEqual which returns True if all
+-- values in the list are equal.
+
+allEqual :: Eq a => [a] -> Bool
+allEqual [] = True
+allEqual (x:[]) = True 
+allEqual xs 
+    | take 1 xs == take 1 (drop 1 xs)  = allEqual  (drop 1 xs) 
+    | otherwise                        = (head $ tail xs) == head xs
+
+
