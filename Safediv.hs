@@ -1,8 +1,10 @@
+module Main where
+import Data.Maybe
+
 
 data Expr = Val Int | Div Expr Expr
 
 eval :: Expr -> Maybe Int
-
 eval (Val n) = Just n
 eval (Div x y) = do n <- eval x
                     m <- eval y 
@@ -29,3 +31,8 @@ safeDiv :: Int -> Int -> Maybe Int
 
 safeDiv _ 0 = Nothing
 safeDiv n m = Just (n `div` m)
+
+
+main :: IO () 
+main = 
+    return (safeDiv 18 6) >>= print
