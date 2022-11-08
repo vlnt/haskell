@@ -1,0 +1,4 @@
+database:
+  database: test_test
+
+auth-dummy-login: true

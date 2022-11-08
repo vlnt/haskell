@@ -1,7 +1,7 @@
 import System.IO
 
 main = do
-    handle <- openFile "main.hs" ReadMode
+    handle <- openFile "Safediv.hs" ReadMode
     contents <- hGetContents handle
-    putStrLn ( "There are " ++ show(length(lines contents)) ++ " words" )
+    putStrLn ( "There are " ++ show(length(lines contents)) ++ " lines" )
     hClose handle
